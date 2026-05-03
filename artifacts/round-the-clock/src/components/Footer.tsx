@@ -4,17 +4,29 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a2456] text-white py-12 px-4">
+    <footer
+      className="text-white py-14 px-4"
+      style={{ background: "linear-gradient(135deg, #0f1a3d 0%, #1a2456 60%, #1e3a8a 100%)" }}
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <h3 className="text-xl font-bold mb-3">Round The Clock</h3>
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center text-sm">🕐</div>
+            <h3 className="text-xl font-bold">
+              Round <span className="text-amber-400">The Clock</span>
+            </h3>
+          </div>
           <p className="text-white/60 text-sm leading-relaxed">
-            Madurai's premium all-in-one home & lifestyle services. Your trusted partner for maintenance, repairs, and care.
+            Madurai's{" "}
+            <span className="text-amber-400 font-semibold">premium</span>{" "}
+            all-in-one home & lifestyle services. Your{" "}
+            <span className="text-amber-400 font-semibold">trusted</span>{" "}
+            partner for maintenance, repairs, and care.
           </p>
         </div>
 
         <div>
-          <h4 className="font-semibold mb-4 text-white/80 uppercase text-xs tracking-widest">Quick Links</h4>
+          <h4 className="font-semibold mb-4 text-amber-400 uppercase text-xs tracking-widest">Quick Links</h4>
           <ul className="space-y-2">
             {[
               { label: "Home", id: "hero" },
@@ -25,9 +37,9 @@ export default function Footer() {
               <li key={link.id}>
                 <button
                   onClick={() => scrollTo(link.id)}
-                  className="text-white/60 hover:text-white text-sm transition-colors"
+                  className="text-white/60 hover:text-amber-400 text-sm transition-colors flex items-center gap-1.5"
                 >
-                  {link.label}
+                  <span className="text-amber-400/50">→</span> {link.label}
                 </button>
               </li>
             ))}
@@ -35,16 +47,21 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-semibold mb-4 text-white/80 uppercase text-xs tracking-widest">Contact Details</h4>
+          <h4 className="font-semibold mb-4 text-amber-400 uppercase text-xs tracking-widest">Contact Details</h4>
           <ul className="space-y-2 text-white/60 text-sm">
-            <li>Plot No.197, 1st Floor, N.M.S. Nagar, Madurai – 625014</li>
-            <li>
-              <a href="tel:+919600344322" className="hover:text-white transition-colors">
+            <li className="flex items-start gap-1.5">
+              <span className="text-amber-400 mt-0.5">📍</span>
+              Plot No.197, 1st Floor, N.M.S. Nagar, Madurai – 625014
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="text-amber-400">📞</span>
+              <a href="tel:+919600344322" className="hover:text-amber-400 transition-colors">
                 +91 96003 44322
               </a>
             </li>
-            <li>
-              <a href="mailto:rtccorporatellp@gmail.com" className="hover:text-white transition-colors">
+            <li className="flex items-center gap-1.5">
+              <span className="text-amber-400">📧</span>
+              <a href="mailto:rtccorporatellp@gmail.com" className="hover:text-amber-400 transition-colors">
                 rtccorporatellp@gmail.com
               </a>
             </li>
@@ -53,7 +70,9 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 mt-10 pt-6 text-center text-white/40 text-sm">
-        © 2025 Round The Clock. All Rights Reserved. | Madurai, Tamil Nadu
+        © 2025{" "}
+        <span className="text-amber-400 font-semibold">Round The Clock</span>
+        . All Rights Reserved. | Madurai, Tamil Nadu
       </div>
     </footer>
   );

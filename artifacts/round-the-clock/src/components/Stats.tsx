@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 1000, suffix: "+", label: "Happy Customers" },
-  { value: 30, suffix: "+", label: "Services Offered" },
-  { value: 4.9, suffix: "", label: "Average Rating", isDecimal: true },
-  { value: 24, suffix: "/7", label: "Availability" },
+  { value: 1000, suffix: "+", label: "Happy Customers", icon: "😊" },
+  { value: 30, suffix: "+", label: "Services Offered", icon: "🛠️" },
+  { value: 4.9, suffix: "", label: "Average Rating", icon: "⭐", isDecimal: true },
+  { value: 24, suffix: "/7", label: "Availability", icon: "🕐" },
 ];
 
 function useCountUp(target: number, duration: number, start: boolean, isDecimal?: boolean) {
@@ -29,11 +29,14 @@ function useCountUp(target: number, duration: number, start: boolean, isDecimal?
 function StatItem({ stat, animate }: { stat: typeof stats[0]; animate: boolean }) {
   const count = useCountUp(stat.value, 1800, animate, (stat as any).isDecimal);
   return (
-    <div className="text-center">
-      <div className="text-5xl sm:text-6xl font-bold text-amber-400 mb-2">
+    <div className="text-center group">
+      <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-200">
+        {stat.icon}
+      </div>
+      <div className="text-5xl sm:text-6xl font-bold text-amber-400 mb-2 tabular-nums">
         {(stat as any).isDecimal ? count.toFixed(1) : count.toLocaleString()}{stat.suffix}
       </div>
-      <div className="text-white/70 text-base">{stat.label}</div>
+      <div className="text-white/70 text-sm font-medium uppercase tracking-wider">{stat.label}</div>
     </div>
   );
 }
@@ -52,11 +55,22 @@ export default function Stats() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#1a2456] py-20 px-4">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
-        {stats.map((stat) => (
-          <StatItem key={stat.label} stat={stat} animate={animate} />
-        ))}
+    <section
+      ref={ref}
+      className="py-20 px-4"
+      style={{ background: "linear-gradient(135deg, #0f1a3d 0%, #1a2456 50%, #1e3a8a 100%)" }}
+    >
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl font-bold text-white">
+            Trusted by <span className="text-amber-400">Thousands</span> Across Madurai
+          </h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          {stats.map((stat) => (
+            <StatItem key={stat.label} stat={stat} animate={animate} />
+          ))}
+        </div>
       </div>
     </section>
   );
