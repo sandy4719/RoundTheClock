@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
+import type { Page } from "@/App";
 
-export default function Navbar() {
+type NavbarProps = {
+  page: Page;
+  setPage: (p: Page) => void;
+};
+
+export default function Navbar({ page, setPage }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -11,7 +17,20 @@ export default function Navbar() {
   }, []);
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (page !== "home") {
+      setPage("home");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false);
+  };
+
+  const goTo = (p: Page) => {
+    setPage(p);
+    window.scrollTo(0, 0);
     setMenuOpen(false);
   };
 
@@ -22,26 +41,40 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
-        <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
+        <button onClick={() => goTo("home")} className="flex items-center gap-3">
           <img src="/logo.jpeg" alt="Round The Clock" className="h-14 w-14 rounded-full object-cover shadow-md border-2 border-amber-400" />
           <span className="text-lg font-bold text-[#1a2456] tracking-tight">
             Round The Clock
           </span>
         </button>
 
-        <div className="hidden md:flex items-center gap-8">
-          {["hero", "services", "how-it-works", "contact"].map((id, i) => {
-            const labels = ["Home", "Services", "How It Works", "Contact"];
-            return (
-              <button
-                key={id}
-                onClick={() => scrollTo(id)}
-                className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium transition-colors"
-              >
-                {labels[i]}
-              </button>
-            );
-          })}
+        <div className="hidden md:flex items-center gap-6">
+          {[
+            { label: "Home", action: () => scrollTo("hero") },
+            { label: "Services", action: () => scrollTo("services") },
+            { label: "How It Works", action: () => scrollTo("how-it-works") },
+            { label: "Contact", action: () => scrollTo("contact") },
+          ].map(({ label, action }) => (
+            <button
+              key={label}
+              onClick={action}
+              className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium transition-colors"
+            >
+              {label}
+            </button>
+          ))}
+
+          <button
+            onClick={() => goTo("reviews")}
+            className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+              page === "reviews"
+                ? "text-amber-500 font-bold"
+                : "text-[#1a2456]/70 hover:text-amber-500"
+            }`}
+          >
+            ⭐ Reviews
+          </button>
+
           <a
             href="https://wa.me/919600344322"
             target="_blank"
@@ -71,18 +104,28 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-md">
-          {["hero", "services", "how-it-works", "contact"].map((id, i) => {
-            const labels = ["Home", "Services", "How It Works", "Contact"];
-            return (
-              <button
-                key={id}
-                onClick={() => scrollTo(id)}
-                className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium text-left transition-colors"
-              >
-                {labels[i]}
-              </button>
-            );
-          })}
+          {[
+            { label: "Home", action: () => scrollTo("hero") },
+            { label: "Services", action: () => scrollTo("services") },
+            { label: "How It Works", action: () => scrollTo("how-it-works") },
+            { label: "Contact", action: () => scrollTo("contact") },
+          ].map(({ label, action }) => (
+            <button
+              key={label}
+              onClick={action}
+              className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium text-left transition-colors"
+            >
+              {label}
+            </button>
+          ))}
+
+          <button
+            onClick={() => goTo("reviews")}
+            className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium text-left transition-colors flex items-center gap-1"
+          >
+            ⭐ Reviews
+          </button>
+
           <a
             href="https://wa.me/919600344322"
             target="_blank"

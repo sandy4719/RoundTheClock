@@ -1,4 +1,10 @@
-export default function Footer() {
+import type { Page } from "@/App";
+
+type FooterProps = {
+  setPage: (p: Page) => void;
+};
+
+export default function Footer({ setPage }: FooterProps) {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -43,6 +49,14 @@ export default function Footer() {
                 </button>
               </li>
             ))}
+            <li>
+              <button
+                onClick={() => { setPage("reviews"); window.scrollTo(0, 0); }}
+                className="text-white/60 hover:text-amber-400 text-sm transition-colors flex items-center gap-1.5"
+              >
+                <span className="text-amber-400/50">→</span> ⭐ Reviews
+              </button>
+            </li>
           </ul>
         </div>
 
