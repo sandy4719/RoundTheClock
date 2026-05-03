@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 
-type NavbarProps = {
-  onBook: () => void;
-};
-
-export default function Navbar({ onBook }: NavbarProps) {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -46,12 +42,14 @@ export default function Navbar({ onBook }: NavbarProps) {
               </button>
             );
           })}
-          <button
-            onClick={onBook}
+          <a
+            href="https://wa.me/919600344322"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#1a2456] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-all hover:scale-105 shadow-md"
           >
-            Book Now
-          </button>
+            Contact Us
+          </a>
         </div>
 
         <button
@@ -85,12 +83,14 @@ export default function Navbar({ onBook }: NavbarProps) {
               </button>
             );
           })}
-          <button
-            onClick={() => { onBook(); setMenuOpen(false); }}
+          <a
+            href="https://wa.me/919600344322"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#1a2456] text-white px-5 py-2 rounded-full text-sm font-bold w-fit hover:bg-amber-500 transition-colors"
           >
-            Book Now
-          </button>
+            Contact Us
+          </a>
         </div>
       )}
     </nav>

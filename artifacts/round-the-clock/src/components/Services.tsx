@@ -1,9 +1,3 @@
-import type { ServiceItem } from "@/App";
-
-type ServicesProps = {
-  onBook: (service: ServiceItem) => void;
-};
-
 const serviceCategories = [
   {
     icon: "🔧",
@@ -70,7 +64,9 @@ const serviceCategories = [
   },
 ];
 
-export default function Services({ onBook }: ServicesProps) {
+const WA_LINK = "https://wa.me/919600344322";
+
+export default function Services() {
   return (
     <section id="services" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -110,12 +106,14 @@ export default function Services({ onBook }: ServicesProps) {
                   ))}
                 </ul>
 
-                <button
-                  onClick={() => onBook({ name: cat.title, category: cat.title })}
-                  className="w-full bg-amber-400 text-[#1a2456] py-2.5 rounded-lg text-sm font-bold hover:bg-amber-300 transition-all duration-200 hover:shadow-md flex items-center justify-center gap-1"
+                <a
+                  href={`${WA_LINK}?text=Hi, I'm interested in ${encodeURIComponent(cat.title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-amber-400 text-[#1a2456] py-2.5 rounded-lg text-sm font-bold hover:bg-amber-300 transition-all duration-200 hover:shadow-md flex items-center justify-center gap-2"
                 >
-                  Book Now →
-                </button>
+                  💬 WhatsApp Us →
+                </a>
               </div>
             </div>
           ))}
