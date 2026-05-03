@@ -62,6 +62,17 @@ const serviceCategories = [
       { label: "Document Work Help", icon: "📄" },
     ],
   },
+  {
+    icon: "🏠",
+    title: "Home Improvement",
+    color: "from-blue-600 to-indigo-800",
+    items: [
+      { label: "Painting – Interior & Exterior", icon: "🖌️" },
+      { label: "Wall Putty – Smoothing & Polishing", icon: "🪟" },
+      { label: "False Ceiling – POP & Gypsum", icon: "🏗️" },
+      { label: "Tile Fixing – Flooring & Wall Tiling", icon: "🟫" },
+    ],
+  },
 ];
 
 const WA_LINK = "https://wa.me/919600344322";
