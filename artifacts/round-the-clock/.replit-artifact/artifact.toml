@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Round The Clock"
+version = "1.0.0"
+id = "artifacts/round-the-clock"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21003
+
+[services.development]
+run = "pnpm --filter @workspace/round-the-clock run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/round-the-clock", "run", "build" ]
+publicDir = "artifacts/round-the-clock/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21003"
+BASE_PATH = "/"
