@@ -29,7 +29,7 @@ export default function Navbar({ onBook }: NavbarProps) {
         <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
           <img src="/logo.jpeg" alt="Round The Clock" className="h-14 w-14 rounded-full object-cover shadow-md border-2 border-amber-400" />
           <span className="text-lg font-bold text-[#1a2456] tracking-tight">
-            Round <span className="text-amber-500">The Clock</span>
+            Round The Clock
           </span>
         </button>
 

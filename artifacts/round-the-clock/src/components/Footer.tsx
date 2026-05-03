@@ -12,8 +12,8 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img src="/logo.jpeg" alt="Round The Clock" className="h-12 w-12 rounded-full object-cover shadow-md" />
-            <h3 className="text-xl font-bold">
-              Round <span className="text-amber-400">The Clock</span>
+            <h3 className="text-xl font-bold text-white">
+              Round The Clock
             </h3>
           </div>
           <p className="text-white/60 text-sm leading-relaxed">
