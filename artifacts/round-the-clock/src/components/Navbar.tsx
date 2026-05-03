@@ -21,17 +21,15 @@ export default function Navbar({ onBook }: NavbarProps) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#0f1a3d]/95 shadow-lg shadow-black/30 backdrop-blur-md"
-          : "bg-[#0f1a3d]/90 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+        scrolled ? "shadow-md" : "shadow-sm"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <button onClick={() => scrollTo("hero")} className="flex items-center gap-2">
-          <img src="/logo.jpeg" alt="Round The Clock" className="h-10 w-10 rounded-full object-cover shadow-md" />
-          <span className="text-lg font-bold text-white tracking-tight">
-            Round <span className="text-amber-400">The Clock</span>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+        <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
+          <img src="/logo.jpeg" alt="Round The Clock" className="h-14 w-14 rounded-full object-cover shadow-md border-2 border-amber-400" />
+          <span className="text-lg font-bold text-[#1a2456] tracking-tight">
+            Round <span className="text-amber-500">The Clock</span>
           </span>
         </button>
 
@@ -42,7 +40,7 @@ export default function Navbar({ onBook }: NavbarProps) {
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className="text-white/70 hover:text-amber-400 text-sm font-medium transition-colors"
+                className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium transition-colors"
               >
                 {labels[i]}
               </button>
@@ -50,7 +48,7 @@ export default function Navbar({ onBook }: NavbarProps) {
           })}
           <button
             onClick={onBook}
-            className="bg-amber-400 text-[#0f1a3d] px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-300 transition-all hover:scale-105 shadow-md shadow-amber-400/30"
+            className="bg-[#1a2456] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-all hover:scale-105 shadow-md"
           >
             Book Now
           </button>
@@ -58,7 +56,7 @@ export default function Navbar({ onBook }: NavbarProps) {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white p-1"
+          className="md:hidden text-[#1a2456] p-1"
           aria-label="Toggle menu"
         >
           {menuOpen ? (
@@ -74,14 +72,14 @@ export default function Navbar({ onBook }: NavbarProps) {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-[#0f1a3d] border-t border-white/10 px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-md">
           {["hero", "services", "how-it-works", "contact"].map((id, i) => {
             const labels = ["Home", "Services", "How It Works", "Contact"];
             return (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className="text-white/70 hover:text-amber-400 text-sm font-medium text-left transition-colors"
+                className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium text-left transition-colors"
               >
                 {labels[i]}
               </button>
@@ -89,7 +87,7 @@ export default function Navbar({ onBook }: NavbarProps) {
           })}
           <button
             onClick={() => { onBook(); setMenuOpen(false); }}
-            className="bg-amber-400 text-[#0f1a3d] px-5 py-2 rounded-full text-sm font-bold w-fit hover:bg-amber-300 transition-colors"
+            className="bg-[#1a2456] text-white px-5 py-2 rounded-full text-sm font-bold w-fit hover:bg-amber-500 transition-colors"
           >
             Book Now
           </button>
