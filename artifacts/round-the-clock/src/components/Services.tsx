@@ -106,14 +106,12 @@ export default function Services() {
                   ))}
                 </ul>
 
-                <a
-                  href={`${WA_LINK}?text=Hi, I'm interested in ${encodeURIComponent(cat.title)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                   className="w-full bg-amber-400 text-[#1a2456] py-2.5 rounded-lg text-sm font-bold hover:bg-amber-300 transition-all duration-200 hover:shadow-md flex items-center justify-center gap-2"
                 >
-                  💬 WhatsApp Us →
-                </a>
+                  Book Now →
+                </button>
               </div>
             </div>
           ))}
