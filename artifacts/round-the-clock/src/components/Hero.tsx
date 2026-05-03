@@ -23,9 +23,9 @@ export default function Hero({ onExplore }: HeroProps) {
 
         <p className="text-white/70 text-lg sm:text-xl mb-10 tracking-wider">
           <span className="text-amber-300 font-semibold">Install</span>
-          {" "}•{" "}
+          {" "}|{" "}
           <span className="text-amber-300 font-semibold">Service</span>
-          {" "}•{" "}
+          {" "}|{" "}
           <span className="text-amber-300 font-semibold">Maintenance</span>
         </p>
 
