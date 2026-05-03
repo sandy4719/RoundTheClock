@@ -10,8 +10,8 @@ export default function Footer() {
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center text-sm">🕐</div>
+          <div className="flex items-center gap-3 mb-4">
+            <img src="/logo.jpeg" alt="Round The Clock" className="h-12 w-12 rounded-full object-cover shadow-md" />
             <h3 className="text-xl font-bold">
               Round <span className="text-amber-400">The Clock</span>
             </h3>
