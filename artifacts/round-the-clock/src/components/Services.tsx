@@ -4,7 +4,7 @@ const serviceCategories = [
     title: "Repair & Maintenance",
     color: "from-blue-600 to-blue-800",
     items: [
-      { label: "Electrician Services", icon: "⚡" },
+      { label: "Electrical Services", icon: "⚡" },
       { label: "Plumbing Services", icon: "🔩" },
       { label: "AC Installation/Repair/Service", icon: "❄️" },
       { label: "RO Installation/Repair/Service", icon: "💧" },
