@@ -4,7 +4,6 @@ const stats = [
   { value: 1000, suffix: "+", label: "Happy Customers", icon: "😊" },
   { value: 30, suffix: "+", label: "Services Offered", icon: "🛠️" },
   { value: 4.9, suffix: "", label: "Average Rating", icon: "⭐", isDecimal: true },
-  { value: 24, suffix: "/7", label: "Availability", icon: "🕐" },
 ];
 
 function useCountUp(target: number, duration: number, start: boolean, isDecimal?: boolean) {
