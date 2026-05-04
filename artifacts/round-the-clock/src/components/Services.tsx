@@ -46,7 +46,7 @@ const serviceCategories = [
   },
   {
     icon: "🐕",
-    title: "Pet Services",
+    title: "Pet Care",
     color: "from-indigo-500 to-indigo-700",
     items: [
       { label: "Dog Grooming", icon: "✂️" },
