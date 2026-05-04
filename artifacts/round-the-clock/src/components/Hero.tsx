@@ -6,7 +6,7 @@ const serviceImages = [
   { src: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=100&h=100&fit=crop&auto=format", label: "Electrical" },
   { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=100&h=100&fit=crop&auto=format", label: "Plumbing" },
   { src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=100&h=100&fit=crop&auto=format", label: "Cleaning" },
-  { src: "https://images.unsplash.com/photo-1549317661-bd32c8ce0729?w=100&h=100&fit=crop&auto=format", label: "Car Care" },
+  { src: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=100&h=100&fit=crop&auto=format", label: "Car Care" },
   { src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop&auto=format", label: "Pet Care" },
   { src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=100&h=100&fit=crop&auto=format", label: "Gardening" },
   { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=100&h=100&fit=crop&auto=format", label: "Repairs" },
