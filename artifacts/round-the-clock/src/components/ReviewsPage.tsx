@@ -129,7 +129,7 @@ export default function ReviewsPage({ onBack }: { onBack: () => void }) {
           <h1 className="text-4xl font-bold text-[#1a2456] mb-2">
             Share Your <span className="text-amber-500">Experience</span>
           </h1>
-          <p className="text-gray-500">Your feedback helps us serve Madurai better</p>
+          <p className="text-gray-500">Your Feedback Helps Us Serve You Better!</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-14">
