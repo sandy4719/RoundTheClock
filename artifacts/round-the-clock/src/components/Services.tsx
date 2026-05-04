@@ -49,9 +49,12 @@ const serviceCategories = [
     title: "Pet Services",
     color: "from-indigo-500 to-indigo-700",
     items: [
-      { label: "Pet Grooming", icon: "✂️" },
-      { label: "Pet Walking", icon: "🦮" },
-      { label: "Pet Sitting", icon: "🏠" },
+      { label: "Dog Grooming", icon: "✂️" },
+      { label: "Pet Bathing & Cleaning", icon: "🛁" },
+      { label: "Nail Trimming", icon: "💅" },
+      { label: "Pet Walking at Your Location", icon: "🦮" },
+      { label: "Pet Day Care & Feeding at Your Location", icon: "🐾" },
+      { label: "Pet Training at Your Location", icon: "🎓" },
     ],
   },
   {
