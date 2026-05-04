@@ -62,9 +62,9 @@ const serviceCategories = [
     title: "Support Services",
     color: "from-blue-800 to-blue-950",
     items: [
-      { label: "Personal Assistance", icon: "🤝" },
-      { label: "Grocery Shopping", icon: "🛒" },
-      { label: "Document Work Help", icon: "📄" },
+      { label: "Daily Labour/Helper", icon: "🦺" },
+      { label: "Security Services / Watchman", icon: "💂" },
+      { label: "Home Nurse", icon: "🩺" },
     ],
   },
   {
