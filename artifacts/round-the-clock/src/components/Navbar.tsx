@@ -75,14 +75,12 @@ export default function Navbar({ page, setPage }: NavbarProps) {
             ⭐ Reviews
           </button>
 
-          <a
-            href="https://wa.me/919600344322"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => scrollTo("contact")}
             className="bg-[#1a2456] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-all hover:scale-105 shadow-md"
           >
-            Contact Us
-          </a>
+            Book Now
+          </button>
         </div>
 
         <button
@@ -126,14 +124,12 @@ export default function Navbar({ page, setPage }: NavbarProps) {
             ⭐ Reviews
           </button>
 
-          <a
-            href="https://wa.me/919600344322"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => scrollTo("contact")}
             className="bg-[#1a2456] text-white px-5 py-2 rounded-full text-sm font-bold w-fit hover:bg-amber-500 transition-colors"
           >
-            Contact Us
-          </a>
+            Book Now
+          </button>
         </div>
       )}
     </nav>
