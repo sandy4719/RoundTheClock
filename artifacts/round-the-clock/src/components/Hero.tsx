@@ -12,9 +12,12 @@ export default function Hero({ onExplore }: HeroProps) {
       style={{ background: "linear-gradient(135deg, #0f1a3d 0%, #1a2456 50%, #1e3a8a 100%)" }}
     >
       <div className="max-w-4xl mx-auto">
-        <div className="inline-block bg-amber-400/20 border border-amber-400/40 text-amber-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wider uppercase">
-          Madurai's #1 Home Services
-        </div>
+        <img
+          src="/text-logo.png"
+          alt="Round The Clock – Help is Here"
+          className="h-20 sm:h-24 mx-auto mb-6 object-contain"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-4">
           Home Services{" "}
