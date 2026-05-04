@@ -34,12 +34,14 @@ const serviceCategories = [
   },
   {
     icon: "🌿",
-    title: "Garden Services",
+    title: "Gardening Service",
     color: "from-blue-500 to-blue-700",
     items: [
-      { label: "Garden Maintenance", icon: "🌱" },
-      { label: "Plant Care & Watering", icon: "🪴" },
-      { label: "Landscape Cleaning", icon: "🍃" },
+      { label: "Terrace Garden Setup", icon: "🌿" },
+      { label: "Front House/Office Decorative Plants Setup", icon: "🪴" },
+      { label: "Water Fountain Installation", icon: "⛲" },
+      { label: "Garden Design", icon: "🌺" },
+      { label: "All Maintenance", icon: "🌱" },
     ],
   },
   {
