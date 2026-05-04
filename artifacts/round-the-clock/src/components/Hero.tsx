@@ -15,7 +15,7 @@ export default function Hero({ onExplore }: HeroProps) {
         <img
           src="/text-logo.png"
           alt="Round The Clock – Help is Here"
-          className="w-full sm:w-11/12 md:w-5/6 max-w-3xl mx-auto mb-6 object-contain"
+          className="w-1/2 sm:w-2/5 max-w-xs mx-auto mb-6 object-contain"
           style={{ filter: "brightness(0) invert(1)" }}
         />
 
