@@ -58,7 +58,7 @@ export default function Navbar({ page, setPage }: NavbarProps) {
             <button
               key={label}
               onClick={action}
-              className="text-[#1a2456]/70 hover:text-amber-500 text-sm font-medium transition-colors"
+              className="text-[#1a2456] hover:text-amber-500 text-base font-bold transition-colors"
             >
               {label}
             </button>
@@ -66,10 +66,10 @@ export default function Navbar({ page, setPage }: NavbarProps) {
 
           <button
             onClick={() => goTo("reviews")}
-            className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+            className={`text-base font-bold transition-colors flex items-center gap-1 ${
               page === "reviews"
-                ? "text-amber-500 font-bold"
-                : "text-[#1a2456]/70 hover:text-amber-500"
+                ? "text-amber-500"
+                : "text-[#1a2456] hover:text-amber-500"
             }`}
           >
             ⭐ Reviews
