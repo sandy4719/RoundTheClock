@@ -2,7 +2,16 @@ type HeroProps = {
   onExplore: () => void;
 };
 
-const serviceIcons = ["⚡", "🔧", "🧹", "🚗", "🐕", "🌿", "🧑‍🔧", "🏠"];
+const serviceImages = [
+  { src: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=100&h=100&fit=crop&auto=format", label: "Electrical" },
+  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=100&h=100&fit=crop&auto=format", label: "Plumbing" },
+  { src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=100&h=100&fit=crop&auto=format", label: "Cleaning" },
+  { src: "https://images.unsplash.com/photo-1549317661-bd32c8ce0729?w=100&h=100&fit=crop&auto=format", label: "Car Care" },
+  { src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop&auto=format", label: "Pet Care" },
+  { src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=100&h=100&fit=crop&auto=format", label: "Gardening" },
+  { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=100&h=100&fit=crop&auto=format", label: "Repairs" },
+  { src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=100&h=100&fit=crop&auto=format", label: "Home" },
+];
 
 export default function Hero({ onExplore }: HeroProps) {
   return (
@@ -47,13 +56,17 @@ export default function Hero({ onExplore }: HeroProps) {
           </a>
         </div>
 
-        <div className="flex justify-center gap-6 sm:gap-10 flex-wrap">
-          {serviceIcons.map((icon, i) => (
-            <div
-              key={i}
-              className="text-4xl sm:text-5xl hover:scale-125 transition-transform duration-200 cursor-default drop-shadow-lg"
-            >
-              {icon}
+        <div className="flex justify-center gap-4 sm:gap-6 flex-wrap">
+          {serviceImages.map((item, i) => (
+            <div key={i} className="flex flex-col items-center gap-1.5 group cursor-default">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-amber-400/50 group-hover:border-amber-400 group-hover:scale-110 transition-all duration-200 shadow-lg">
+                <img
+                  src={item.src}
+                  alt={item.label}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-white/60 text-xs font-medium group-hover:text-amber-400 transition-colors">{item.label}</span>
             </div>
           ))}
         </div>
