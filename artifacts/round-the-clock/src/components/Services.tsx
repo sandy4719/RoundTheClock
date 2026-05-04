@@ -6,8 +6,8 @@ const serviceCategories = [
     items: [
       { label: "Electrical Services", icon: "⚡" },
       { label: "Plumbing Services", icon: "🔩" },
-      { label: "AC Installation/Repair/Service", icon: "❄️" },
-      { label: "RO Installation/Repair/Service", icon: "💧" },
+      { label: "AC Install/Service/Maintenance", icon: "❄️" },
+      { label: "RO Install/Service/Maintenance", icon: "💧" },
       { label: "Fridge & Washing Machine Repair", icon: "🧊" },
       { label: "Inverter & Battery Services", icon: "🔋" },
     ],
