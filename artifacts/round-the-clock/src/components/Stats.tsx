@@ -65,7 +65,7 @@ export default function Stats() {
             Trusted by <span className="text-amber-400">Thousands</span> Across Madurai
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
           {stats.map((stat) => (
             <StatItem key={stat.label} stat={stat} animate={animate} />
           ))}
