@@ -11,14 +11,14 @@ const steps = [
     icon: "📅",
     title: "Choose a Time Slot",
     highlight: "Time Slot",
-    description: "We schedule at your convenience, same day available.",
+    description: "We schedule at your convenience.",
   },
   {
     number: 3,
     icon: "✅",
     title: "Expert at Your Door",
     highlight: "Expert",
-    description: "Vetted professionals arrive and get the job done right.",
+    description: "Expert At Your Door Step — Vetted Professionals Will Get The Job Done.",
   },
 ];
 
